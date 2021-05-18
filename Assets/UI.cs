@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private Camera mainCamera;
+    private Canvas canvas;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
-    }
+        canvas = GetComponent<Canvas>();
+        mainCamera = Camera.main;
+
+        canvas.worldCamera = mainCamera;
+    }    
 }
