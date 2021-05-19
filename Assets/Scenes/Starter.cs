@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class Starter : MonoBehaviour
 {
+    [SerializeField] private LevelsContainer levels;
     [SerializeField] private GameCore gameCore;
 
     private void OnEnable()
     {
-        StartGameCoreButton.StartGameCoreButtonClkEve += StartGameCoreButtonClk;
+        StartLevelButton.StartLevelButtonEve += StartLevelButtonClk;        
     }
     private void OnDisable()
     {
-        StartGameCoreButton.StartGameCoreButtonClkEve -= StartGameCoreButtonClk;
+        StartLevelButton.StartLevelButtonEve -= StartLevelButtonClk;        
     }
 
-    private void StartGameCoreButtonClk()
+    private void Awake()
     {
-        StartGameCoreButton.StartGameCoreButtonClkEve -= StartGameCoreButtonClk;
-        gameCore = Instantiate(gameCore);
+        levels = Instantiate(levels, transform);
+        gameCore = Instantiate(gameCore, transform);
+    }
+
+    private void StartLevelButtonClk(int levelId)
+    {
+        Level level = Instantiate(levels.GetLevel(levelId));
+        Rock rock = Instantiate(gameCore.Rock);
+        level.Init(rock);
     }
 }
