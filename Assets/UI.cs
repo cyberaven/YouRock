@@ -26,7 +26,7 @@ public class UI : MonoBehaviour
         canvas.worldCamera = mainCamera;
     }
 
-    private void StartLevelButtonClk(int id)
+    private void StartLevelButtonClk()
     {
         selectLevelPanel.SetActive(false);
     }
