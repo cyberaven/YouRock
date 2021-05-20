@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788233463e9147d47ab02bb8be22fad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   rockRespawnPoint: {fileID: 2981158973183300801}
 --- !u!1001 &5449129983882831529
 PrefabInstance:

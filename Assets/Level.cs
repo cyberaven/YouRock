@@ -12,14 +12,17 @@ public class Level : MonoBehaviour
 
     public int Id { get => id; set => id = value; }
 
+    public delegate void LevelCreatedDel(Level level, Rock rock);
+    public static event LevelCreatedDel LevelCreatedEve;
+
     private void OnEnable()
     {
-        DeathCollider.DeathColliderEve += DeathColliderEve;
+        DeathCollider.DeathColliderEve += DeathColliderEve;        
     }
     private void OnDisable()
     {
-        DeathCollider.DeathColliderEve -= DeathColliderEve;
-    }
+        DeathCollider.DeathColliderEve -= DeathColliderEve;       
+    }   
 
     public void Init(Rock rock)
     {
@@ -29,6 +32,8 @@ public class Level : MonoBehaviour
         {
             throw new Exception("Не буду работать, камень дай!");
         }
+
+        LevelCreatedEve?.Invoke(this, rock);
 
         StartLevel();
     }
