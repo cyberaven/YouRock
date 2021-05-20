@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8310424278122097709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5442310427988662888}
+  m_Layer: 0
+  m_Name: Well_stone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5442310427988662888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310424278122097709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.155352, y: -16.134588, z: -59.024376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5241318251238394744}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5707853290351062163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5442310427988662888}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.24156523
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.092321396
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.008872986
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+      propertyPath: m_Name
+      value: Well_stone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+--- !u!4 &5241318251238394744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d92e2920fb51b14997e0e86263963d5, type: 3}
+  m_PrefabInstance: {fileID: 5707853290351062163}
+  m_PrefabAsset: {fileID: 0}
