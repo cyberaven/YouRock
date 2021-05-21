@@ -32,11 +32,21 @@ public class Starter : MonoBehaviour
     }
     private void SelectLevelButtonClk(int id)
     {
+        if(level != null)
+        {
+            Destroy(level);            
+        }
+
         level = Instantiate(levels.GetLevel(id));
     }
     private void SelectRockButtonClk(int id)
     {
-        rock = Instantiate(rocks.GetRock(id));
+        if(rock != null)
+        {
+            Destroy(rock);            
+        }
+
+        rock = Instantiate(rocks.GetRock(id));        
     }
 
     private void StartLevelButtonClk()
