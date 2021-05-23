@@ -10,6 +10,7 @@ public class Rock : MonoBehaviour
     private void Awake()
     {
         camera = Camera.main;
+
         camera.transform.SetParent(cameraParent);        
     }
 }
