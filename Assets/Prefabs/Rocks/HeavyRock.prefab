@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 5398674251382124101}
   - component: {fileID: 7394126414982529031}
   - component: {fileID: 6930575823427423355}
+  - component: {fileID: -1498986840343310258}
   m_Layer: 0
   m_Name: HeavyRock
   m_TagString: Rock
@@ -239,3 +240,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraParent: {fileID: 2548022040727283615}
+  rotateForce: 1
+--- !u!114 &-1498986840343310258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743107916981009203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14fe4806320ef404680203234d90aa1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateForce: 100
+  jumpForce: 100
+  steeringWheel: {fileID: 3749169056703225349}
