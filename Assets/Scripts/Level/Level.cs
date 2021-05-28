@@ -6,7 +6,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] private int id = 0;
-    [SerializeField] private RockRespawnPoint rockRespawnPoint;
+    [SerializeField] private Transform rockRespawnPoint;
 
     private Rock rock;
 
@@ -45,7 +45,7 @@ public class Level : MonoBehaviour
 
     private void PutRockOnStartPos()
     {
-        rock.transform.position = rockRespawnPoint.transform.position;
+        rock.PutOnStartPosition(rockRespawnPoint);             
     }
 
     private void DeathColliderEve()

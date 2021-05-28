@@ -27,11 +27,11 @@ public class RockControll : MonoBehaviour
     {
         if (keyCode == KeyCode.RightArrow)
         {
-            rigidbody.AddForce(steeringWheel.transform.right * rotateForce, ForceMode.Impulse);
+            steeringWheel.transform.Rotate(Vector3.up, 15);            
         }
         if (keyCode == KeyCode.LeftArrow)
         {
-            rigidbody.AddForce(-steeringWheel.transform.right * rotateForce, ForceMode.Impulse);
+            steeringWheel.transform.Rotate(Vector3.up, -15);           
         }
-    }
+    }   
 }

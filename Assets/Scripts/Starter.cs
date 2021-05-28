@@ -51,7 +51,6 @@ public class Starter : MonoBehaviour
 
     private void StartLevelButtonClk()
     {               
-        level.Init(rock);
-        rock.GetComponent<Rigidbody>().useGravity = true;
+        level.Init(rock);       
     }
 }
