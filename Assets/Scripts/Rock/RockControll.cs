@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class RockControll : MonoBehaviour
 {
@@ -25,13 +26,23 @@ public class RockControll : MonoBehaviour
 
     private void UserPushKey(KeyCode keyCode)
     {
+        Vector3 moveDirection = rigidbody.velocity.normalized;
+
+        if (keyCode == KeyCode.UpArrow)
+        {            
+            rigidbody.AddForce(moveDirection * 10f, ForceMode.Impulse);
+        }
+        if (keyCode == KeyCode.DownArrow)
+        {
+            rigidbody.AddForce(-moveDirection * 10f, ForceMode.Impulse);
+        }
         if (keyCode == KeyCode.RightArrow)
         {
-            steeringWheel.transform.Rotate(Vector3.up, 15);            
+            rigidbody.AddForce(transform.right * 10f, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.LeftArrow)
         {
-            steeringWheel.transform.Rotate(Vector3.up, -15);           
+            rigidbody.AddForce(-transform.right * 10f, ForceMode.Impulse);
         }
     }   
 }
