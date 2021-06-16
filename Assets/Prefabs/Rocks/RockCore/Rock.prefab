@@ -126,8 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5006df18be69f94cafc753a51c495a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateForce: 10
-  pushForce: 1
 --- !u!114 &-7338980939831835723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fe4806320ef404680203234d90aa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateForce: 100
-  jumpForce: 100
+  forwardPushForce: 10
+  backPushForce: 5
+  rightPushForce: 5
+  leftPushForce: 5
   steeringWheel: {fileID: 0}

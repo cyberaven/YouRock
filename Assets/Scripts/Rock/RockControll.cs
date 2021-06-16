@@ -5,8 +5,10 @@ using DG.Tweening;
 
 public class RockControll : MonoBehaviour
 {
-    [SerializeField] private float rotateForce = 1f;
-    [SerializeField] private float jumpForce = 1f;
+    [SerializeField] private float forwardPushForce = 10f;
+    [SerializeField] private float backPushForce = 10f;
+    [SerializeField] private float rightPushForce = 10f;
+    [SerializeField] private float leftPushForce = 10f;    
     [SerializeField] private GameObject steeringWheel;
     private Rigidbody rigidbody;
 
@@ -31,19 +33,19 @@ public class RockControll : MonoBehaviour
 
         if (keyCode == KeyCode.UpArrow)
         {            
-            rigidbody.AddForce(steeringWheel.transform.forward * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(steeringWheel.transform.forward * forwardPushForce, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.DownArrow)
         {
-            rigidbody.AddForce(-steeringWheel.transform.forward * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(-steeringWheel.transform.forward * backPushForce, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.RightArrow)
         {
-            rigidbody.AddForce(steeringWheel.transform.right * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(steeringWheel.transform.right * rightPushForce, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.LeftArrow)
         {
-            rigidbody.AddForce(-steeringWheel.transform.right * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(-steeringWheel.transform.right * leftPushForce, ForceMode.Impulse);
         }
     }   
 }
