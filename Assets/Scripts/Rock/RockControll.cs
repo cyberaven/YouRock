@@ -13,6 +13,7 @@ public class RockControll : MonoBehaviour
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        steeringWheel = Camera.main.gameObject;
     }    
 
     private void OnEnable()
@@ -30,19 +31,19 @@ public class RockControll : MonoBehaviour
 
         if (keyCode == KeyCode.UpArrow)
         {            
-            rigidbody.AddForce(moveDirection * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(steeringWheel.transform.forward * 10f, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.DownArrow)
         {
-            rigidbody.AddForce(-moveDirection * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(-steeringWheel.transform.forward * 10f, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.RightArrow)
         {
-            rigidbody.AddForce(transform.right * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(steeringWheel.transform.right * 10f, ForceMode.Impulse);
         }
         if (keyCode == KeyCode.LeftArrow)
         {
-            rigidbody.AddForce(-transform.right * 10f, ForceMode.Impulse);
+            rigidbody.AddForce(-steeringWheel.transform.right * 10f, ForceMode.Impulse);
         }
     }   
 }

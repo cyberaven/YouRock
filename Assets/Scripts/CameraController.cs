@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public bool takeOffsetFromInitialPos = true;
     public Vector3 generalOffset;
     Vector3 whereCameraShouldBe;
+    public float distanceToObj = 10f;
     bool warningAlreadyShown = false;
 
     private void Start() {
@@ -17,23 +18,18 @@ public class CameraController : MonoBehaviour
     }
 
     void FixedUpdate()
-    {        
-    //    Debug.Log("Camera rotation: " + transform.rotation);
-    //    Debug.Log("Camera rotation: " + transform.rotation.eulerAngles);
-    //    Debug.Log("Camera rotation: " + transform.rotation.y);
-        
-    //    Quaternion rotation = transform.rotation;        
-    //    if(transform.rotation.eulerAngles.y > 30 && transform.rotation.eulerAngles.y < 90)
-    //    {
-    //        generalOffset = new Vector3(-10, 3, 0);
-    //    }
-    //    if (transform.rotation.eulerAngles.y < 30 && transform.rotation.eulerAngles.y > 90)
-    //    {
-    //        generalOffset = new Vector3(0, 3, -10);
-    //    }
-        if (target != null) {
-            whereCameraShouldBe = target.position + generalOffset;
-            transform.position = Vector3.Lerp(transform.position, whereCameraShouldBe, 1 / laziness);
+    {            
+        if (target != null) 
+        {
+            Vector3 x = target.position + new Vector3(0, 3, 0);
+
+            if(Vector3.Distance(x, transform.position) > distanceToObj)
+            {
+                transform.position = Vector3.Lerp(transform.position, x, 1 / laziness);                
+            }
+            
+            //whereCameraShouldBe = target.position + generalOffset;
+            //transform.position = Vector3.Lerp(transform.position, whereCameraShouldBe, 1 / laziness);
 
             if (lookAtTarget) transform.LookAt(target);
         } else {
