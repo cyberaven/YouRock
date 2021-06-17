@@ -1,17 +1,17 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     public Transform target;
-    [Range(1f,1000f)] public float laziness = 10f;
+    [Range(1f,100f)] public float laziness = 10f;
     public bool lookAtTarget = true;
     public bool takeOffsetFromInitialPos = true;
     public Vector3 generalOffset;
-    Vector3 whereCameraShouldBe;
+    public Vector3 whereCameraShouldBe;
     public float distanceToObj = 10f;
-    bool warningAlreadyShown = false;
+    public bool warningAlreadyShown = false;
 
     private void Start() {
         if (takeOffsetFromInitialPos && target != null) generalOffset = transform.position - target.position;
