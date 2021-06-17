@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14fe4806320ef404680203234d90aa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardPushForce: 10
-  backPushForce: 5
-  rightPushForce: 5
-  leftPushForce: 5
+  forwardPushForce: 8
+  backPushForce: 3
+  rightPushForce: 2
+  leftPushForce: 2
   steeringWheel: {fileID: 0}
