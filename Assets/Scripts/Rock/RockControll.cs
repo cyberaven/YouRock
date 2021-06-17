@@ -8,8 +8,8 @@ public class RockControll : MonoBehaviour
     [SerializeField] private float forwardPushForce = 10f;
     [SerializeField] private float backPushForce = 10f;
     [SerializeField] private float rightPushForce = 10f;
-    [SerializeField] private float leftPushForce = 10f;    
-    [SerializeField] private GameObject steeringWheel;
+    [SerializeField] private float leftPushForce = 10f;
+    [SerializeField] private GameObject steeringWheel;   
     
     private Rigidbody rigidbody;
     private bool onGround = false;
@@ -27,44 +27,25 @@ public class RockControll : MonoBehaviour
     private void OnDisable()
     {
         UserInput.UserPushKeyEve -= UserPushKey;
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision != null)
-        {
-            onGround = true;
-            Debug.Log(onGround);
-        }        
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision != null)
-        {
-            onGround = false;
-            Debug.Log(onGround);
-        }
-    }
+    }    
 
     private void UserPushKey(KeyCode keyCode)
-    {
-        if (onGround)
+    {        
+        if (keyCode == KeyCode.UpArrow)
         {
-            if (keyCode == KeyCode.UpArrow)
-            {
-                rigidbody.AddForce(steeringWheel.transform.forward * forwardPushForce, ForceMode.Impulse);
-            }
-            if (keyCode == KeyCode.DownArrow)
-            {
-                rigidbody.AddForce(-steeringWheel.transform.forward * backPushForce, ForceMode.Impulse);
-            }
-            if (keyCode == KeyCode.RightArrow)
-            {
-                rigidbody.AddForce(steeringWheel.transform.right * rightPushForce, ForceMode.Impulse);
-            }
-            if (keyCode == KeyCode.LeftArrow)
-            {
-                rigidbody.AddForce(-steeringWheel.transform.right * leftPushForce, ForceMode.Impulse);
-            }
+            rigidbody.AddForce(steeringWheel.transform.forward * forwardPushForce, ForceMode.Impulse);
         }
+        if (keyCode == KeyCode.DownArrow)
+        {
+            rigidbody.AddForce(-steeringWheel.transform.forward * backPushForce, ForceMode.Impulse);
+        }
+        if (keyCode == KeyCode.RightArrow)
+        {
+            rigidbody.AddForce(steeringWheel.transform.right * rightPushForce, ForceMode.Impulse);
+        }
+        if (keyCode == KeyCode.LeftArrow)
+        {
+            rigidbody.AddForce(-steeringWheel.transform.right * leftPushForce, ForceMode.Impulse);
+        }        
     }   
 }
