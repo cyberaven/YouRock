@@ -6,6 +6,7 @@ using UnityEngine;
 public class UI : MonoBehaviour
 {
     [SerializeField] private GameObject selectLevelPanel;
+    [SerializeField] private GameObject cooldownPanel;
     private Camera mainCamera;
     private Canvas canvas;
 
