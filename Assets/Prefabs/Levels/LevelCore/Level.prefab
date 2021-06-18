@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  rockRespawnPoint: {fileID: 0}
+  rockRespawnPoint: {fileID: 1154385629384063341}
 --- !u!1001 &5449129983882831529
 PrefabInstance:
   m_ObjectHideFlags: 0
