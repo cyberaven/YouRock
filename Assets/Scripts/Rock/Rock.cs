@@ -27,7 +27,11 @@ public class Rock : MonoBehaviour
     {        
         StartLevelButton.StartLevelButtonEve -= StartLevelButtonClk;
     }
-   
+    private void Update()
+    {
+        Debug.Log(transform.position);
+    }
+
     private void StartLevelButtonClk()
     {
         rigidbody.useGravity = true;       

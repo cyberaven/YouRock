@@ -4,30 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainCamera : MonoBehaviour
-{
-    private Rock rock;
-    private Rigidbody rockRigidbody;
-    private bool followEnable = false;
-    private Vector3 offsetPoint = new Vector3(0f, 4.5f, -5f);
-    private CameraController cameraController;
-   
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "ChangeOffSetForCam")
-        {
-            Vector3 newOffset = other.gameObject.transform.GetComponent<ChangeOffSetForCam>().camOffset;
-            ChangeOffSetForCam(newOffset);
-        }
-    }
-
-    private void ChangeOffSetForCam(Vector3 newOffset)
-    {
-        cameraController.generalOffset = newOffset;
-    }
+{   
+    private Transform target;
+    private SmoothFollowTarget smoothFollowTarget;
+    private SmoothLookAtTarget smoothLookAtTarget;
 
     private void Awake()
     {
-        cameraController  = GetComponent<CameraController>();        
+        smoothFollowTarget = GetComponent<SmoothFollowTarget>();
+        smoothLookAtTarget = GetComponent<SmoothLookAtTarget>();
     }
 
     private void OnEnable()
@@ -40,7 +25,9 @@ public class MainCamera : MonoBehaviour
     }
 
     private void RockBorn(Rock rock)
-    {
-        cameraController.target = rock.transform;   
-    }
+    {        
+        target = rock.transform;
+        smoothFollowTarget.FollowOn(target.transform);
+        smoothLookAtTarget.LookAtOn(target.transform);
+    }   
 }

@@ -22,7 +22,7 @@ public class RockControll : MonoBehaviour
 
     private void OnEnable()
     {
-        UserInput.UserPushKeyEve += UserPushKey;
+       UserInput.UserPushKeyEve += UserPushKey;
     }
     private void OnDisable()
     {
