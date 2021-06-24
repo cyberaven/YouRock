@@ -7,7 +7,7 @@ public class SmoothFollowTarget : MonoBehaviour
     [SerializeField] private bool followEnable = false;
     private float distanceTarget = 10f;
     private Vector3 offSet = new Vector3(0, 3, 0);
-    private float moveSpeed = 1f;
+    private float moveSpeed = 3f;
 
     public void FollowOn(Transform transform)
     {
