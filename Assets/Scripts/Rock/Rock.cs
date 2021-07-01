@@ -26,11 +26,7 @@ public class Rock : MonoBehaviour
     private void OnDisable()
     {        
         StartLevelButton.StartLevelButtonEve -= StartLevelButtonClk;
-    }
-    private void Update()
-    {
-        Debug.Log(transform.position);
-    }
+    }    
 
     private void StartLevelButtonClk()
     {

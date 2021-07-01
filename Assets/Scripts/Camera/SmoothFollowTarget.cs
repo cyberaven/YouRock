@@ -14,13 +14,15 @@ public class SmoothFollowTarget : MonoBehaviour
         target = transform;
         followEnable = true;        
     }
+    
     private void FixedUpdate()
     {
         if(followEnable)
         {
+            Follow(target);
             if (Vector3.Distance(transform.position, target.position) > distanceTarget)
             {
-                Follow(target);
+                //Follow(target);
             }
         }
     }
@@ -28,7 +30,6 @@ public class SmoothFollowTarget : MonoBehaviour
     private void Follow(Transform target)
     {
         Vector3 followPoint = target.position + offSet;
-        transform.position = Vector3.Lerp(transform.position, followPoint, moveSpeed * Time.deltaTime);
-        
+        transform.position = Vector3.Lerp(transform.position, followPoint, moveSpeed * Time.deltaTime);        
     }
 }

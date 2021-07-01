@@ -12,7 +12,7 @@ public class SmoothLookAtTarget : MonoBehaviour
         target = transform;
         lookAtEnable = true;
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (lookAtEnable)
         {
